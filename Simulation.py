@@ -1,5 +1,5 @@
-from Body import Body
 from Vector2D import Vector2D
+
 
 # Simulate gravity and physics engine
 class Simulation:
@@ -17,9 +17,9 @@ class Simulation:
         displacement = body2.position - body1.position
         distance = displacement.magnitude()
         if distance == 0:
-            return Vector2D(0,0)
+            return Vector2D(0, 0)
         direction = displacement / distance
-        force_magnitude = self.G * body1.mass * body2.mass / (distance ** 2)
+        force_magnitude = self.G * body1.mass * body2.mass / (distance**2)
         force_vector = direction * force_magnitude
         return force_vector
 
@@ -42,12 +42,10 @@ class Simulation:
             body.position += body.velocity * dt
         self.time += dt
         self.record_state()
-        
+
     # Recording state of simulation
     def record_state(self):
         self.time_history.append(self.time)
         for body in self.bodies:
             position_copy = Vector2D(body.position.x, body.position.y)
             self.history[body].append(position_copy)
-
-

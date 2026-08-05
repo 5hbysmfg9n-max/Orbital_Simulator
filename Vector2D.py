@@ -2,7 +2,8 @@
 
 import math
 
-#Class for operations on 2D Vectors
+
+# Class for operations on 2D Vectors
 class Vector2D:
     def __init__(self, x=0.0, y=0.0):
         self.x = float(x)
@@ -12,7 +13,7 @@ class Vector2D:
     def __repr__(self):
         return f"Vector2D({self.x}, {self.y})"
 
-    #Basic vector operations
+    # Basic vector operations
     def __add__(self, other):
         return Vector2D(self.x + other.x, self.y + other.y)
 

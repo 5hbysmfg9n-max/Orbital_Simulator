@@ -27,4 +27,10 @@ class Visualization:
         plt.axis("equal")
         plt.legend()
         plt.grid()
+        plt.savefig(
+            "images/orbit.png",
+            dpi=300,
+            bbox_inches="tight",
+        )
+
         plt.show()

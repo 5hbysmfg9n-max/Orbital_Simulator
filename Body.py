@@ -1,5 +1,6 @@
 from Vector2D import Vector2D
 
+# Representing the body in space
 class Body:
     def __init__(self, name: str, mass: float, radius: float,
                  position: Vector2D, velocity: Vector2D):
@@ -9,5 +10,6 @@ class Body:
         self.position = position
         self.velocity = velocity
 
+    # For debugging
     def __str__(self):
         return f"{self.name} | mass={self.mass} | radius={self.radius} | pos={self.position} | vel={self.velocity}"

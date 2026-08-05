@@ -90,3 +90,4 @@ python3 Main.py
 Manually adjust your parameters or bodies within `Main.py`.
 
 ## Example Output
+![Orbital Trajectory](images/orbit.png)
